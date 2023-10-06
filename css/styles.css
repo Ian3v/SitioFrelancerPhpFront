@@ -1,0 +1,316 @@
+:root {
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --grisClaro: #dfe9f3;
+
+  --fuente-principal: 3.8rem;
+  --familie-CinzelDecorative: "Cinzel Decorative", cursive;
+  --familie-Amita: "Amita", cursive;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-snap-type: y mandatory;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body {
+  font-size: 16px;
+  font-family: var(--familie-Amita);
+
+  background-image: linear-gradient(to top, var(--gris) 0%, var(--blanco) 100%);
+}
+
+/* ---------------------------- Scroll Snap type ---------------------------- */
+
+header, 
+#h2-servicios,
+.servicios,
+.servicio:nth-child(3),
+.formulario
+{
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
+}
+/* ---------------------------------- boton --------------------------------- */
+.boton {
+  background-color: var(--secundario);
+  color: var(--blanco);
+
+  font-weight: 700;
+  font-size: 2rem;
+
+  text-transform: uppercase;
+
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem 3rem;
+  margin-top: 1rem;
+
+  width: 90%;
+
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .boton {
+    width: auto;
+  }
+}
+
+.boton:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+  cursor: pointer;
+}
+
+
+.sombra {
+  -webkit-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  -moz-box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  box-shadow: 0px 5px 15px 0px rgba(112, 112, 112, 0.54);
+  background-color: var(--blanco);
+  padding: 2rem;
+  border-radius: 1rem;
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.titulo span {
+  font-size: 2rem;
+}
+
+/* ------------------------------- utilidadez ------------------------------- */
+.w-sm-100 {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .w-sm-100 {
+    width: auto;
+  }
+}
+
+.flex {
+  display: flex;
+}
+
+.alinear-derecha {
+  justify-content: flex-end;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.contenedor {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.nav-bg {
+  background-color: var(--secundario);
+}
+
+.navegacion-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+.navegacion-principal a {
+  display: block;
+  text-align: center;
+  color: var(--blanco);
+  text-decoration: none;
+  font-family: var(--familie-CinzelDecorative);
+  font-size: 2rem;
+  font-weight: 700;
+  padding: 1rem;
+}
+
+.navegacion-principal a:hover {
+  background-color: var(--primario);
+  color: var(--oscuro);
+}
+
+/* ------------------------------- Hero imagen ------------------------------ */
+.hero {
+  background-image: url(../img/consejosfestival80.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  height: 450px;
+  /* padding: 20px; */
+
+  position: relative;
+
+  margin-bottom: 2rem;
+}
+
+.contenido-hero {
+  position: absolute;
+  background-color: rgb(0 0 0 / 50%);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.contenido-hero h2,
+.contenido-hero p,
+.contenido-hero a {
+  color: var(--blanco);
+}
+
+.ubicacion {
+  display: flex;
+  align-items: flex-end;
+}
+
+/* ---------------------------------- boton --------------------------------- */
+
+.contenido-hero img {
+  width: 10rem;
+}
+
+/* ----------------------------- Main Servicios ----------------------------- */
+
+@media (min-width: 768px) {
+  .servicios {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+.servicio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.servicio h3 {
+  color: var(--secundario);
+}
+.servicio p {
+  line-height: 2;
+  text-align: center;
+}
+.servicio .iconos {
+  background-color: var(--primario);
+  border-radius: 50%;
+  width: 15rem;
+  height: 15rem;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.servicio .iconos:hover{
+  background-color: var(--secundario);
+}
+/* ------------------------------- fomrulario ------------------------------- */
+
+.formulario {
+  background-color: var(--gris);
+  border-radius: 1rem;
+  padding: 2rem;
+
+  width: min(60rem, 100%);
+  margin: 0 auto;
+}
+
+.formulario fieldset {
+  border: none;
+}
+
+.formulario legend {
+  color: var(--primario);
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1.8rem;
+
+  margin: 0 auto;
+  margin-bottom: 2rem;
+}
+
+
+@media (min-width: 768px) {
+  .contenedor-campos {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr 3fr;
+    grid-template-rows: auto auto 23rem;
+    gap: 1rem;
+  } 
+
+  .campo:nth-child(6), .campo:nth-child(8){
+    grid-column: 2/ 5;
+  }
+
+  .campo{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin-bottom: 1rem;
+  }
+}
+.contenedor-campos label {
+  color: var(--blanco);
+  font-weight: 700;
+  margin-bottom: .5rem;
+
+  display: block;
+}
+
+textarea {
+  height: 20rem;
+}
+
+.input-text {
+  padding: 1.5rem;
+  border: none;
+  border-radius: .5rem;
+  width: 100%;
+}
+/* -------------------------------------------------------------------------- */
+.footer{
+  text-align: center;
+}
